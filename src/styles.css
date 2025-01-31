@@ -12,3 +12,29 @@ body {
   letter-spacing: 1.3px;
   line-height: 1.5;
 }
+
+/* ACCORDION */
+.question {
+  border-bottom: 1px solid #e6e6e6;
+  transition: border-bottom 0.4s, transform 0.4s, letter-spacing 0.4s;
+  letter-spacing: 2px;
+}
+
+.panel {
+  padding: 18px 0;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.show-text .question-text {
+  display: block;
+  max-height: 1000px;
+  transition: max-height 0.4s;
+}

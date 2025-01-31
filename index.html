@@ -36,7 +36,7 @@
 
     <title>Alveum - Channelling Innovation</title>
 
-    <script type="module" src="/src/app.js" defer></script>
+    <script type="module" src="./src/main.ts" defer></script>
   </head>
   <body>
     <nav class="bg-[#113654]">
@@ -96,7 +96,7 @@
       </section>
 
       <section class="p-6 container mx-auto my-12">
-        <h3 class="text-center font-semibold text-2xl">Trusted by</h3>
+        <h3 class="text-center font-bold text-xl lg:text-2xl">Trusted by</h3>
 
         <div class="flex items-center justify-between gap-4 mt-10">
           <img
@@ -142,7 +142,7 @@
       </section>
 
       <section class="p-6 container mx-auto my-12" id="about">
-        <h3 class="text-center font-semibold text-2xl">About us</h3>
+        <h3 class="text-center font-bold text-xl lg:text-2xl">About us</h3>
 
         <div class="grid lg:grid-cols-2 gap-10 items-center mt-12">
           <aside>
@@ -168,13 +168,35 @@
       </section>
 
       <section class="p-6 container mx-auto my-12" id="services">
-        <h3 class="text-center font-semibold text-2xl">Our Services</h3>
+        <h3 class="text-center font-bold text-xl lg:text-2xl">Our Services</h3>
         <p class="w-[800px] mx-auto text-center mt-4">
           We offer end-to-end solutions tailored to your unique challenges,
           leveraging our global talent pool to deliver innovation at scale
         </p>
 
         <div class="mt-10 grid grid-cols-3 gap-10" id="serviceGrid"></div>
+      </section>
+
+      <section class="p-6 container mx-auto my-12" id="projects">
+        <h3 class="text-center font-bold text-xl lg:text-2xl">
+          Recent Projects
+        </h3>
+        <p class="w-[800px] mx-auto text-center mt-4">
+          Our recent projects showcase our commitment to delivering cutting-edge
+          solutions across diverse industries.
+        </p>
+
+        <div class="space-y-12 mt-12" id="projectsGrid"></div>
+      </section>
+
+      <section class="p-6 container mx-auto my-12" id="faqs">
+        <h3 class="text-center font-bold text-xl lg:text-2xl">FAQs</h3>
+
+        <div class="mt-12 w-[800px] mx-auto space-y-6" id="accordion"></div>
+      </section>
+
+      <section class="p-6 container mx-auto my-12" id="blog">
+        <h3 class="text-center font-bold text-xl lg:text-2xl">Blog</h3>
       </section>
     </main>
 
