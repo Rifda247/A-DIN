@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        app: resolve(__dirname, "src/app.js"),
-        style: resolve(__dirname, "src/style.css"),
+        app: resolve(__dirname, "src/main.ts"),
+        style: resolve(__dirname, "src/styles.css"),
 
         main: resolve(__dirname, "index.html"),
         contact: resolve(__dirname, "contact.html"),
