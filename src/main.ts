@@ -1,18 +1,20 @@
 import "./styles.css";
-// import Lenis from "lenis";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import Lenis from "lenis";
 
-// // Initialize Lenis
-// const lenis = new Lenis({
-//   autoRaf: true,
-// });
+new Lenis({
+  autoRaf: true,
+});
 
-// // Listen for the scroll event and log the event data
-// lenis.on("scroll", (e) => {
-//   console.log(e);
-// });
+const navBtn = document.getElementById("nav-btn");
+const links = document.getElementById("links");
+const contact_btn = document.getElementById("contact-btn");
 
-const currentYear = document.getElementById("currentYear") as HTMLElement;
-currentYear.textContent = new Date().getFullYear().toString();
+navBtn?.addEventListener("click", () => {
+  links?.classList.toggle("hide");
+  contact_btn?.classList.toggle("hide");
+});
 
 const services = [
   {
@@ -239,11 +241,13 @@ if (projectsGrid) {
             class="grid lg:grid-cols-2 gap-10 items-center bg-white"
           
           >
-            <aside class=${index % 2 === 0 ? "order-last" : ""}>
+             <aside class="${
+               index % 2 === 0 ? "lg:order-last lg:flex lg:justify-end" : ""
+             }">
               <img
                 src=${project.img}
                 alt=${project.title}
-                class="w-full h-[400px] object-cover"
+                class="w-[500px] h-[300px] lg:h-[400px] object-cover"
               />
             </aside>
 
@@ -314,19 +318,19 @@ if (blogsGrid) {
     .map(
       (blog) =>
         `
-    <aside>
-              <img src=${blog.img} alt=${blog.title} class="h-[200px] w-full object-cover rounded-lg" />
-              <div class="mt-6 space-y-2">
+         <aside class="shadow rounded-lg">
+              <img src=${blog.img} alt=${blog.title} class="h-[200px] w-full object-cover rounded-t-lg" />
+              <div class="my-6 space-y-2 p-2">
                 <p class="font-semibold text-[#A9B7C4] uppercase text-sm">
                 ${blog.date}
                 </p>
-                <h5 class="font-semibold">
+                <h5 class="font-semibold min-h-[5rem]">
                  ${blog.title}
                 </h5>
                 <p class="text-[#4D4D4D] text-sm">${blog.desc}</p>
                 <a
                   href=""
-                  class="flex items-center text-[var(--primary-color)] hover:underline"
+                  class="mt-4 flex items-center text-[var(--primary-color)] hover:underline"
                 >
                   Read More
                   <svg
@@ -352,9 +356,9 @@ if (blogsGrid) {
     .join("");
 }
 
-function toggleElementVisibility(element: HTMLElement) {
-  element.classList.toggle("hide");
-}
+// function toggleElementVisibility(element: HTMLElement) {
+//   element.classList.toggle("hide");
+// }
 
 function createAccordionItem(item: AccordionItem, index: number) {
   return `
@@ -446,3 +450,134 @@ const questions = document.querySelectorAll(".question");
 
 // Accordion Listeners
 addAccordionListeners(questions);
+
+// TESTIMONIALS
+const testimonials = [
+  {
+    name: "Sinp S.",
+    company: "Mind Computing",
+    comment:
+      "When it comes to big data analytics and AI-powered forecasting, Alveum is unparalleled. They helped us develop a predictive modeling system that has dramatically improved our risk assessment accuracy.",
+  },
+  {
+    name: "Julian J.",
+    company: "JJAIBOT",
+    comment:
+      "Alveum's expertise in neuro-symbolic AI allowed us to create an environmental impact assessment tool that combines data-driven insights with expert knowledge in a way we hadn't thought possible.",
+  },
+  {
+    name: "Jim M.",
+    company: "Yohanna Foundation",
+    comment:
+      "Partnering with Alveum for our AI-driven Praises.ai application was a game-changer. The AI/ML Engineers seamlessly integrated complex models into a user-friendly mobile app, exceeding our expectations.",
+  },
+  {
+    name: "Krishna K.",
+    company: "Panha Solutions",
+    comment:
+      "Alveum's edge AI solutions revolutionized our supply chain operations. Their AI models that work efficiently on our edge devices have significantly reduced latency and improved real-time decision making.",
+  },
+];
+
+const testimonialContainer = document.getElementById("testimonials-container");
+
+if (testimonialContainer) {
+  testimonialContainer.innerHTML = `
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        ${testimonials
+          .map(
+            (testimony) => `
+            <div class="swiper-slide">
+              <article
+                class="p-6 lg:w-[800px] mx-auto flex flex-col gap-4 items-center font-light"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="var(--primary-color)"
+                  stroke="var(--primary-color)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="50"
+                  height="50"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"
+                  ></path>
+                  <path
+                    d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"
+                  ></path>
+                </svg>
+
+                <p class="text-center text-[#171717] font-medium text-lg">
+                ${testimony.comment}
+                </p>
+
+                <p class="text-[#667185] text-center font-medium mt-4">
+                  ${testimony.name}, ${testimony.company}
+                </p>
+              </article>
+            </div>`
+          )
+          .join("")}
+      </div>
+    </div>`;
+
+  new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".image-swiper-button-next",
+      prevEl: ".image-swiper-button-prev",
+      disabledClass: "swiper-button-disabled",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+}
+
+// FORM
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+
+  form?.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nameInput = document.querySelector(
+      'input[name="Name"]'
+    ) as HTMLInputElement | null;
+    const emailInput = document.querySelector(
+      'input[name="Email"]'
+    ) as HTMLInputElement | null;
+    const messageInput = document.getElementById(
+      "message"
+    ) as HTMLInputElement | null;
+
+    if (nameInput && emailInput && messageInput) {
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const message = messageInput.value;
+
+      const createMailtoLink = () => {
+        const mailto = "contact@alveum.com";
+        const subjectParam = encodeURIComponent(
+          "contacting you from your website"
+        );
+        const bodyParam = encodeURIComponent(`Hello, I'm ${name}.\n${message}`);
+        const emailParam = encodeURIComponent(email);
+
+        return `mailto:${mailto}?subject=${subjectParam}&body=${bodyParam}&cc=${emailParam}`;
+      };
+
+      const mailtoLink = createMailtoLink();
+      window.open(mailtoLink, "_blank");
+    }
+  });
+});
+
+const currentYear = document.getElementById("currentYear") as HTMLElement;
+currentYear.textContent = new Date().getFullYear().toString();

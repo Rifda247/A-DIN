@@ -38,3 +38,7 @@ body {
   max-height: 1000px;
   transition: max-height 0.4s;
 }
+
+.hide {
+  display: none;
+}
