@@ -1,5 +1,5 @@
 import "./styles.css";
-import Lenis from "lenis";
+// import Lenis from "lenis";
 
 // // Initialize Lenis
 // const lenis = new Lenis({
@@ -10,6 +10,9 @@ import Lenis from "lenis";
 // lenis.on("scroll", (e) => {
 //   console.log(e);
 // });
+
+const currentYear = document.getElementById("currentYear") as HTMLElement;
+currentYear.textContent = new Date().getFullYear().toString();
 
 const services = [
   {
@@ -161,10 +164,11 @@ const services = [
 
 const serviceGrid = document.getElementById("serviceGrid");
 
-serviceGrid.innerHTML = services
-  .map(
-    (service) =>
-      `<aside
+if (serviceGrid) {
+  serviceGrid.innerHTML = services
+    .map(
+      (service) =>
+        `<aside
             class="bg-white p-4 rounded-md space-y-4"
             style="
               box-shadow: 0 1px 10px rgba(81, 169, 225, 0.2),
@@ -183,8 +187,9 @@ serviceGrid.innerHTML = services
                 ${service.description}
             </p>
         </aside>`
-  )
-  .join("");
+    )
+    .join("");
+}
 
 const projects = [
   {
@@ -229,15 +234,12 @@ const projectsGrid = document.getElementById("projectsGrid");
 if (projectsGrid) {
   projectsGrid.innerHTML = projects
     .map(
-      (project) =>
+      (project, index) =>
         `          <div
-            class="grid lg:grid-cols-2 gap-10 items-center bg-white shadow-md"
-            style="
-              box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-                rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-            "
+            class="grid lg:grid-cols-2 gap-10 items-center bg-white"
+          
           >
-            <aside>
+            <aside class=${index % 2 === 0 ? "order-last" : ""}>
               <img
                 src=${project.img}
                 alt=${project.title}
@@ -246,35 +248,106 @@ if (projectsGrid) {
             </aside>
 
             <aside class="space-y-2">
-              <p class="bg-[#051C2C] p-1 text-white w-fit">#${project.hashtag}</p>
+              <p class="bg-[#051C2C] p-1 text-white w-fit">#${
+                project.hashtag
+              }</p>
               <h5 class="font-semibold text-lg">${project.title}</h5>
               <p class="mt-2">
                 ${project.description}  
               </p>
 
-              <a
-                href=""
-                class="mt-8 flex items-center text-[var(--primary-color)] hover:underline"
-              >
-                Learn More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+              <a href="" class="block mt-8">
+                <button
+                  class="bg-[var(--primary-color)] flex items-center text-white p-3 rounded-md hover:opacity-80 transition cursor-pointer"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M9 6l6 6l-6 6" />
-                </svg>
+                  Learn More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6l6 6l-6 6" />
+                  </svg>
+                </button>
               </a>
             </aside>
           </div>`
+    )
+    .join("");
+}
+
+const blogs = [
+  {
+    img: "./src/assets/canada.jpg",
+    date: "01 september 2024",
+    title: "Alveum Expands to Canada, Boosting Nearshore Capabilities.",
+    desc: "Alveum is proud to announce our expansion into Canada, enhancing our ability to provide top-tier nearshore...",
+  },
+  {
+    img: "./src/assets/praisesai.jpg",
+    date: "12 july 2024",
+    title:
+      "Alveum Launches praises.ai: A Groundbreaking AI-Powered Mobile App.",
+    desc: "We're thrilled to announce the successful release of praises.ai: A custom-built LLM for personalized...",
+  },
+  {
+    img: "./src/assets/cto.jpg",
+    date: "22 may 2024",
+    title:
+      "Alveum Welcomes Dr. Habeeb Saludeen to Spearhead Cutting-Edge AI Research.",
+    desc: "We are excited to announce that Dr. Habeeb Saludeen, Ph.D., a distinguished computer scientist has joined the...",
+  },
+];
+
+const blogsGrid = document.getElementById("blogsGrid");
+
+if (blogsGrid) {
+  blogsGrid.innerHTML = blogs
+    .map(
+      (blog) =>
+        `
+    <aside>
+              <img src=${blog.img} alt=${blog.title} class="h-[200px] w-full object-cover rounded-lg" />
+              <div class="mt-6 space-y-2">
+                <p class="font-semibold text-[#A9B7C4] uppercase text-sm">
+                ${blog.date}
+                </p>
+                <h5 class="font-semibold">
+                 ${blog.title}
+                </h5>
+                <p class="text-[#4D4D4D] text-sm">${blog.desc}</p>
+                <a
+                  href=""
+                  class="flex items-center text-[var(--primary-color)] hover:underline"
+                >
+                  Read More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6l6 6l-6 6" />
+                  </svg>
+                </a>
+              </div>
+            </aside>
+  `
     )
     .join("");
 }
