@@ -3,6 +3,14 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Lenis from "lenis";
 
+import drugDiscoveryImg from "../src/assets/drugdiscovery.jpg";
+import praisesAiImg from "../src/assets/praisesai.jpg";
+import termMgmtImg from "../src/assets/termmgmt.jpg";
+import scmImg from "../src/assets/scm.jpg";
+import brainScanImg from "../src/assets/brainscan.jpg";
+import canadaImg from "../src/assets/canada.jpg";
+import ctoImg from "../src/assets/cto.jpg";
+
 new Lenis({
   autoRaf: true,
 });
@@ -199,35 +207,35 @@ const projects = [
     title: "Cognitive Drug Discovery",
     description:
       "A comprehensive small molecules drug discovery platform utilizing generative AI and accuracy of physics-based methods to create optimal molecules.",
-    img: "./src/assets/drugdiscovery.jpg",
+    img: drugDiscoveryImg,
   },
   {
     hashtag: "Artificial Intelligence",
     title: "Praises.ai",
     description:
       "A custom AI & ML-based mobile application with custom Multimodal Language Models and Augmented Reality (AR) features.",
-    img: "./src/assets/praisesai.jpg",
+    img: praisesAiImg,
   },
   {
     hashtag: "AI Process Automation",
     title: "Healthcare Terminology Management",
     description:
       "Modernizes terminology curation and integrates with meaningful use standards to assure functionality of local HIT applications and semantic interoperability.",
-    img: "./src/assets/termmgmt.jpg",
+    img: termMgmtImg,
   },
   {
     hashtag: "AI Process Automation",
     title: "Supply Chain Management",
     description:
       "Leveraging real-time data from IoT sensors, the custom LLM optimizes inventory levels and reduces food waste by accurately predicting demand and shelf life across diverse product categories. The model's natural language processing capabilities enable seamless communication between various stakeholders, automating order processes and facilitating rapid response to supply chain disruptions.",
-    img: "./src/assets/scm.jpg",
+    img: scmImg,
   },
   {
     hashtag: "Machine Learning",
     title: "Brain Scan Image Recognition",
     description:
       "Grad-CAM integrated into deep learning pipelines for fMRI analysis, providing interpretable visualizations of model decision-making processes and enhancing clinician trust in AI-assisted diagnoses.",
-    img: "./src/assets/brainscan.jpg",
+    img: brainScanImg,
   },
 ];
 
@@ -290,20 +298,20 @@ if (projectsGrid) {
 
 const blogs = [
   {
-    img: "./src/assets/canada.jpg",
+    img: canadaImg,
     date: "01 september 2024",
     title: "Alveum Expands to Canada, Boosting Nearshore Capabilities.",
     desc: "Alveum is proud to announce our expansion into Canada, enhancing our ability to provide top-tier nearshore...",
   },
   {
-    img: "./src/assets/praisesai.jpg",
+    img: praisesAiImg,
     date: "12 july 2024",
     title:
       "Alveum Launches praises.ai: A Groundbreaking AI-Powered Mobile App.",
     desc: "We're thrilled to announce the successful release of praises.ai: A custom-built LLM for personalized...",
   },
   {
-    img: "./src/assets/cto.jpg",
+    img: ctoImg,
     date: "22 may 2024",
     title:
       "Alveum Welcomes Dr. Habeeb Saludeen to Spearhead Cutting-Edge AI Research.",
