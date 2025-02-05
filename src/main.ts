@@ -1,63 +1,76 @@
-import "./styles.css";
+import Lenis from "lenis";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import Lenis from "lenis";
+import "./styles.css";
 
-import drugDiscoveryImg from "../src/assets/drugdiscovery.jpg";
-import praisesAiImg from "../src/assets/praisesai.jpg";
-import termMgmtImg from "../src/assets/termmgmt.jpg";
-import scmImg from "../src/assets/scm.jpg";
+import gsap from "gsap";
 import brainScanImg from "../src/assets/brainscan.jpg";
 import canadaImg from "../src/assets/canada.jpg";
 import ctoImg from "../src/assets/cto.jpg";
-import gsap from "gsap";
+import drugDiscoveryImg from "../src/assets/drugdiscovery.jpg";
+import praisesAiImg from "../src/assets/praisesai.jpg";
+import scmImg from "../src/assets/scm.jpg";
+import termMgmtImg from "../src/assets/termmgmt.jpg";
 
 new Lenis({
   autoRaf: true,
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = [
-    { element: document.querySelector("#hero"), animateChildren: true },
-    { element: document.querySelector("#trusted"), animateChildren: false },
-    { element: document.querySelector("#provides"), animateChildren: false },
-    { element: document.querySelector("#about"), animateChildren: false },
-    { element: document.querySelector("#project-0"), animateChildren: false },
-    { element: document.querySelector("#project-1"), animateChildren: false },
-    { element: document.querySelector("#project-2"), animateChildren: false },
-    { element: document.querySelector("#project-3"), animateChildren: false },
-    { element: document.querySelector("#project-4"), animateChildren: false },
-    { element: document.querySelector("#services"), animateChildren: false },
-    {
-      element: document.querySelector("#testimonies"),
-      animateChildren: false,
-    },
-    { element: document.querySelector("#news"), animateChildren: false },
-    { element: document.querySelector("#faqs"), animateChildren: false },
-  ];
+  const sections: { element: HTMLElement | null; animateChildren: boolean }[] =
+    [
+      { element: document.querySelector("#hero"), animateChildren: true },
+      { element: document.querySelector("#trusted"), animateChildren: false },
+      { element: document.querySelector("#provides"), animateChildren: false },
+      { element: document.querySelector("#about"), animateChildren: false },
+      { element: document.querySelector("#project-0"), animateChildren: false },
+      { element: document.querySelector("#project-1"), animateChildren: false },
+      { element: document.querySelector("#project-2"), animateChildren: false },
+      { element: document.querySelector("#project-3"), animateChildren: false },
+      { element: document.querySelector("#project-4"), animateChildren: false },
+      { element: document.querySelector("#services"), animateChildren: false },
+      {
+        element: document.querySelector("#testimonies"),
+        animateChildren: false,
+      },
+      { element: document.querySelector("#news"), animateChildren: false },
+      { element: document.querySelector("#faqs"), animateChildren: false },
+      { element: document.querySelector("#footer"), animateChildren: false },
+      {
+        element: document.querySelector("#footer-text"),
+        animateChildren: false,
+      },
+    ];
 
-  const animateSection = (section: any) => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 50,
-      scale: 0.95, // Slight zoom-in effect
-      duration: 1.5, // Faster but smooth
-      ease: "power3.out",
-    });
+  const animateSection = (section: HTMLElement | null): void => {
+    if (section) {
+      gsap.from(section, {
+        opacity: 0,
+        y: 100,
+        scale: 0.95, // Slight zoom-in effect
+        // rotation: 5, // Subtle rotation for a modern feel
+        duration: 1.2, // Faster but smooth
+        ease: "power4.out", // Smoother easing for a modern look
+      });
+    }
   };
 
-  const animateHeroChildren = () => {
+  const animateHeroChildren = (): void => {
     gsap.from("#hero h1, #hero p, #hero img", {
       opacity: 0,
-      y: 30,
-      duration: 1.2,
-      ease: "back.out(1.7)", // Slight bounce effect
-      stagger: 0.3, // Delays each item slightly
+      y: 40,
+      duration: 1.4,
+      ease: "expo.out", // Smoother, faster exit
+      stagger: 0.2, // Delays each item slightly for staggered effect
+      scale: 0.9, // Add a slight scale-up effect
     });
   };
 
   // Function to animate section children if specified
-  const animateSectionChildren = (section: any) => {
+  const animateSectionChildren = (section: {
+    element: HTMLElement | null;
+    animateChildren: boolean;
+  }): void => {
     if (
       section.animateChildren &&
       section.element === document.querySelector("#hero")
@@ -87,8 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Start observing all sections
-  // @ts-ignore
-  sections.forEach((section) => observer.observe(section.element));
+  sections.forEach((section) => {
+    if (section.element) {
+      observer.observe(section.element);
+    }
+  });
 });
 
 const navBtn = document.getElementById("nav-btn");
