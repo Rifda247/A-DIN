@@ -10,9 +10,85 @@ import scmImg from "../src/assets/scm.jpg";
 import brainScanImg from "../src/assets/brainscan.jpg";
 import canadaImg from "../src/assets/canada.jpg";
 import ctoImg from "../src/assets/cto.jpg";
+import gsap from "gsap";
 
 new Lenis({
   autoRaf: true,
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = [
+    { element: document.querySelector("#hero"), animateChildren: true },
+    { element: document.querySelector("#trusted"), animateChildren: false },
+    { element: document.querySelector("#provides"), animateChildren: false },
+    { element: document.querySelector("#about"), animateChildren: false },
+    { element: document.querySelector("#project-0"), animateChildren: false },
+    { element: document.querySelector("#project-1"), animateChildren: false },
+    { element: document.querySelector("#project-2"), animateChildren: false },
+    { element: document.querySelector("#project-3"), animateChildren: false },
+    { element: document.querySelector("#project-4"), animateChildren: false },
+    { element: document.querySelector("#services"), animateChildren: false },
+    {
+      element: document.querySelector("#testimonies"),
+      animateChildren: false,
+    },
+    { element: document.querySelector("#news"), animateChildren: false },
+    { element: document.querySelector("#faqs"), animateChildren: false },
+  ];
+
+  const animateSection = (section: any) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 50,
+      scale: 0.95, // Slight zoom-in effect
+      duration: 1.5, // Faster but smooth
+      ease: "power3.out",
+    });
+  };
+
+  const animateHeroChildren = () => {
+    gsap.from("#hero h1, #hero p, #hero img", {
+      opacity: 0,
+      y: 30,
+      duration: 1.2,
+      ease: "back.out(1.7)", // Slight bounce effect
+      stagger: 0.3, // Delays each item slightly
+    });
+  };
+
+  // Function to animate section children if specified
+  const animateSectionChildren = (section: any) => {
+    if (
+      section.animateChildren &&
+      section.element === document.querySelector("#hero")
+    ) {
+      animateHeroChildren();
+    }
+  };
+
+  // Create an intersection observer to trigger animations when sections come into view
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = sections.find((sec) => sec.element === entry.target);
+
+          if (section) {
+            animateSection(section.element);
+            animateSectionChildren(section);
+          }
+          observer.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    }
+  );
+
+  // Start observing all sections
+  // @ts-ignore
+  sections.forEach((section) => observer.observe(section.element));
 });
 
 const navBtn = document.getElementById("nav-btn");
@@ -246,7 +322,9 @@ if (projectsGrid) {
     .map(
       (project, index) =>
         `          <div
-            class="grid lg:grid-cols-2 gap-10 items-center bg-white"
+            class="grid lg:grid-cols-2 gap-10 items-center bg-white" id=${
+              "project-" + index
+            }
           
           >
              <aside class="${
