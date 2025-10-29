@@ -4,13 +4,13 @@ import "swiper/css/bundle";
 import "./styles.css";
 
 import gsap from "gsap";
-import brainScanImg from "../src/assets/brainscan.jpg";
-import canadaImg from "../src/assets/canada.jpg";
-import ctoImg from "../src/assets/cto.jpg";
-import drugDiscoveryImg from "../src/assets/drugdiscovery.jpg";
-import praisesAiImg from "../src/assets/praisesai.jpg";
-import scmImg from "../src/assets/scm.jpg";
-import termMgmtImg from "../src/assets/termmgmt.jpg";
+import BrainscanImg from "../src/assets/pricing.jpg";
+import canadaImg from "../src/assets/Hajj-N.jpg";
+import ctoImg from "../src/assets/engr.jpg";
+import drugDiscoveryImg from "../src/assets/experience.jpg";
+import praisesAiImg from "../src/assets/licensed.jpg";
+import scmImg from "../src/assets/support.jpg";
+import termMgmtImg from "../src/assets/management.jpg";
 
 new Lenis({
   autoRaf: true,
@@ -118,149 +118,44 @@ navBtn?.addEventListener("click", () => {
 
 const services = [
   {
-    title: "Custom AI/ML Software Development",
+    title: "Hajj & Uumrah",
     description:
-      "Tailor-made AI and ML solutions designed to address your specific business needs and integrate seamlessly with your existing systems",
-    icon: `              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-chart-line"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 19l16 0" />
-                <path d="M4 15l4 -6l4 2l4 -5l4 4" />
-              </svg>`,
+      "Sacred journey made easy for you with spiritual connections all through your journey with our nasheeds and adhkars",
+    icon: `      <img src="../src/assets/hajj.jpg" alt="Kaaba icon" width="50" height="50" class="object-cover"/>`,
+    img: "../src/assets/hajj.jpg",
+    alt: "Kaaba icon",
   },
   {
-    title: "Data Science & Analytics",
+    title: "Travels and Tours",
     description:
-      "Advanced data analysis and visualization services to uncover hidden patterns, optimize operations, and drive data-informed decision-making for enterprises.",
-    icon: `              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
-                />
-                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-              </svg>`,
+      "Experience seamless global travel with our comprehensive flight bookings, visa assistance and customized tour packages.",
+    icon: `    <img src="../src/assets/airplane.jpg" alt="Airplane icon" width="50" height="50" object-cover/>`,
+    img: "../src/assets/airplane.jpg",
   },
   {
-    title: "Natural Language Processing (NLP) Solutions",
+    title: "General Contracting",
     description:
-      "Cutting-edge NLP applications for text, sentiment analysis, chatbots, and language translation to enhance communication",
-    icon: `              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-bulb"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
-                />
-                <path
-                  d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
-                />
-                <path d="M9.7 17l4.6 0" />
-              </svg>`,
+      "Quality construction services for residential and commercial projects with expert craftmanship and timely delivery.",
+    img: "../src/assets/building.jpg",
   },
   //
   {
-    title: "Computer Vision Applications",
+    title: "General Merchandise",
     description:
-      "State-of-the-art image and video processing solutions for object detection, facial recognition, and visual inspection in various industries",
-    icon: `              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-device-vision-pro"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 7c1.143 0 2.235 .035 3.275 .104c1.017 .068 1.95 .207 2.798 .42c.813 .203 1.52 .505 2.119 .909a3.903 3.903 0 0 1 1.328 1.531c.326 .657 .48 1.48 .48 2.466c0 1.006 -.189 1.91 -.574 2.707c-.375 .779 -.886 1.396 -1.537 1.848a3.696 3.696 0 0 1 -2.16 .66c-.509 0 -.97 -.068 -1.382 -.21a5.84 5.84 0 0 1 -1.17 -.548a18.45 18.45 0 0 1 -1.045 -.695a9.104 9.104 0 0 0 -1.001 -.63a2.376 2.376 0 0 0 -1.13 -.301c-.373 0 -.75 .097 -1.132 .3c-.316 .17 -.65 .38 -1 .63c-.322 .23 -.67 .462 -1.047 .695a5.78 5.78 0 0 1 -1.168 .548c-.413 .142 -.872 .21 -1.378 .21a3.706 3.706 0 0 1 -2.165 -.659c-.651 -.452 -1.162 -1.07 -1.537 -1.848c-.385 -.798 -.574 -1.7 -.574 -2.709c-.004 -.98 .15 -1.802 .477 -2.46a3.897 3.897 0 0 1 1.33 -1.531c.6 -.403 1.307 -.704 2.12 -.907a16.088 16.088 0 0 1 2.8 -.423c1.04 -.071 2.13 -.107 3.273 -.107z"
-                />
-              </svg>`,
+      "Reliable import-export solutions connecting businesses with quality products across diverse industries worldwide.",
+    img: "../src/assets/carton.jpg",
   },
   {
-    title: "Predictive Modeling and Forecasting",
+    title: "International trading",
     description:
-      "    Sophisticated predictive analytics tools to anticipate market trends, customer behavior, and business outcomes for strategic planning",
-    icon: `              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-chart-area-line"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 19l4 -6l4 2l4 -5l4 4l0 5l-16 0" />
-                <path d="M4 12l3 -4l4 2l5 -6l4 4" />
-              </svg>`,
+      "    Facilitating smooth commercial transactions and bulk trading operations across borders with transparency.",
+    img: "../src/assets/globe.jpg",
   },
   {
-    title: "AI-Powered Process Automation",
+    title: "Accommodation Services",
     description:
-      "Intelligent automation solutions that streamline workflows, reduce errors, and increase efficiency across your organization",
-    icon: `            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--primary-color)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-cpu"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
-                />
-                <path d="M9 9h6v6h-6z" />
-                <path d="M3 10h2" />
-                <path d="M3 14h2" />
-                <path d="M10 3v2" />
-                <path d="M14 3v2" />
-                <path d="M21 10h-2" />
-                <path d="M21 14h-2" />
-                <path d="M14 21v-2" />
-                <path d="M10 21v-2" />
-              </svg>`,
+      " Premium hotel reservations and comfortable lodging arrangements for pilgrims and travelers worldwide.",
+    img: "../src/assets/hotel.jpg",
   },
 ];
 
@@ -279,7 +174,7 @@ if (serviceGrid) {
             "
           >
             <div class="flex justify-center">
-             ${service.icon}
+              <img src=${service.img} alt=${service.alt} width="50" height="50" class='object-cover'/>
             </div>
 
             <h2 class="text-lg font-semibold text-center">
@@ -295,39 +190,39 @@ if (serviceGrid) {
 
 const projects = [
   {
-    hashtag: "Machine Learning",
-    title: "Cognitive Drug Discovery",
+   
+    title: "",
     description:
-      "A comprehensive small molecules drug discovery platform utilizing generative AI and accuracy of physics-based methods to create optimal molecules.",
+      "Over 15 years of delivering exceptional services across pilgrimage,construction,travel,and trade sectors",
     img: drugDiscoveryImg,
   },
   {
-    hashtag: "Artificial Intelligence",
-    title: "Praises.ai",
+    
+    title: "24/7 Support",
     description:
-      "A custom AI & ML-based mobile application with custom Multimodal Language Models and Augmented Reality (AR) features.",
+      "We operate with full licensing and accreditation from relevant Nigerian authorities.Our Hajj and Umrah services are officially approved,our construction projects meet all building codes,and our trading operations comply with international regulations.",
     img: praisesAiImg,
   },
   {
-    hashtag: "AI Process Automation",
-    title: "Healthcare Terminology Management",
+    
+    title: "Members of the  Management",
     description:
-      "Modernizes terminology curation and integrates with meaningful use standards to assure functionality of local HIT applications and semantic interoperability.",
+      "Our team comprises of seasoned professionals with extensive expertise in Islamic pilgrimage protocols,international travel regulations,construction management, and global trade.We bring knowlwdge,skill and dedication to every client interaction.",
     img: termMgmtImg,
   },
   {
-    hashtag: "AI Process Automation",
-    title: "Supply Chain Management",
+    
+    title: "",
     description:
-      "Leveraging real-time data from IoT sensors, the custom LLM optimizes inventory levels and reduces food waste by accurately predicting demand and shelf life across diverse product categories. The model's natural language processing capabilities enable seamless communication between various stakeholders, automating order processes and facilitating rapid response to supply chain disruptions.",
+      "Your needs dont't operate on a 9-5 schedule,and neither do we.Our dedicated support team is available around the clock to assist you with inquiries,emergencies,and last-minute changes,ensuring a smooth experience from start to finish.",
     img: scmImg,
   },
   {
-    hashtag: "Machine Learning",
-    title: "Brain Scan Image Recognition",
+    
+    title: "",
     description:
-      "Grad-CAM integrated into deep learning pipelines for fMRI analysis, providing interpretable visualizations of model decision-making processes and enhancing clinician trust in AI-assisted diagnoses.",
-    img: brainScanImg,
+      "No hidden fees,no surprise charges.Just honest,upfront pricing that respects your budget.We believe quality services should be accessibl,affordable.Our competitive rates reflect that commitment while delivering exceptional value.",
+    img: BrainscanImg,
   },
 ];
 
@@ -354,36 +249,13 @@ if (projectsGrid) {
             </aside>
 
             <aside class="space-y-2">
-              <p class="bg-[#051C2C] p-1 text-white w-fit">#${
-                project.hashtag
-              }</p>
+              
               <h5 class="font-semibold text-lg">${project.title}</h5>
               <p class="mt-2">
                 ${project.description}  
               </p>
 
-              <a href="" class="block mt-8">
-                <button
-                  class="bg-[var(--primary-color)] flex items-center text-white p-3 rounded-md hover:opacity-80 transition cursor-pointer"
-                >
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 6l6 6l-6 6" />
-                  </svg>
-                </button>
-              </a>
+            
             </aside>
           </div>`
     )
@@ -393,23 +265,23 @@ if (projectsGrid) {
 const blogs = [
   {
     img: canadaImg,
-    date: "01 september 2024",
-    title: "Alveum Expands to Canada, Boosting Nearshore Capabilities.",
-    desc: "Alveum is proud to announce our expansion into Canada, enhancing our ability to provide top-tier nearshore...",
+    date: "01 Oct 2025",
+    title: "Hajj 2026 Registration Now Open",
+    desc: "Early bird registration for Hajj 2026 is now open. Secure your spot for a spiritually enriching journey with our comprehensive packages...",
   },
   {
     img: praisesAiImg,
-    date: "12 july 2024",
-    title:
-      "Alveum Launches praises.ai: A Groundbreaking AI-Powered Mobile App.",
-    desc: "We're thrilled to announce the successful release of praises.ai: A custom-built LLM for personalized...",
+    date: "20 Oct 2025",
+    title: 
+      "New partnership with Al-Noor Hospitality Group.",
+    desc: "We are excited to announce our strategic partnership with one of the leading accommodation providers in Mecca and Medina....",
   },
   {
     img: ctoImg,
-    date: "22 may 2024",
+    date: "28 Nov 2025",
     title:
-      "Alveum Welcomes Dr. Habeeb Saludeen to Spearhead Cutting-Edge AI Research.",
-    desc: "We are excited to announce that Dr. Habeeb Saludeen, Ph.D., a distinguished computer scientist has joined the...",
+      "Lagos Office Expansion Complete",
+    desc: "Our expanded Lagos office at Ojokoro is now fully operational with enhanced facilities and additional staff to better serve our clients in the region...",
   },
 ];
 
@@ -521,21 +393,21 @@ const accordionContainer = document.getElementById("accordion");
 const accordionData: AccordionItem[] = [
   {
     title:
-      "How does Alveum ensure data security and privacy in AI/ML projects?",
+      "What makes A-Din Globals differnt from other Hajj and travel agencies?",
     content:
-      "We implement robust security measures including: End-to-end data encryption, Strict access controls and authentication protocols, Regular security audits and vulnerability assessments, Compliance with international data protection regulations (e.g., GDPR, CCPA), Data anonymization and pseudonymization techniques",
+      "Unlike single service providers,A-DIN Global offers a complete ecosystem of services under one roof.We're not just a travel agency,we are your lifetime partner.Whether you need pilgrimage services today,construction services tommorrow or international trading support next year,we are here for you.Our multi-location presence in Ilorin and Lagos,combined with years of experiece and 24/7 support,means you always have a trusted partner ready to serve you.",
   },
   {
     title:
-      "What makes Alveum's AI solutions more cost-effective than developing in-house?",
+      "How do you ensure the quality and safety of your hajj and umrah packages?",
     content:
-      "Our team of AI/ML experts brings years of experience across various industries, reducing the learning curve, development time and to quickly scale your team up or down based on project needs, optimizing resource allocation",
+      "Quality and safety are non negotiables for us.We are fully licensed and accredited by Nigerian authorities,and we partner exclusively with verified,premium hotels within walking distance of Masjid al-Haram and Masjid an-Nabawi.Our experienced team handles every detail,from visa processing to on-ground support,to ensure a smooth,safe and spiritually fulfilling journey for all our clients.Our 24/7 support means you are never alone during your sacred journey.we also maintain small group sizes to provide personalized attention and care for each pilgrim.",
   },
   {
     title:
-      "How does Alveum approach the interpretability and explainability of AI models?",
+      "Can A-DIN Global handle multiple services for my business simultaneously?",
     content:
-      "By focusing on interpretability (model architectures) and explainability (XAI - LIME, SNAP and Decision Trees) , we ensure that our AI solutions not only perform well but also build trust and facilitate informed decision-making within our clients' organizations",
+      "Absolutely!That's one of our core strengths.Our integrated service model allows us to manage multiple aspects of your business needs seamlessly.Whether you require construction services for a new office building,travel arrangements for your team,and international trading support,we coordinate everything efficiently to save you time and hassle.Our dedicated account managers ensure clear communication and smooth execution across all services.",
   },
 ];
 
@@ -556,28 +428,28 @@ addAccordionListeners(questions);
 // TESTIMONIALS
 const testimonials = [
   {
-    name: "Sinp S.",
-    company: "Mind Computing",
+    name: "Barr Fatimah A.",
+    company: "A barrister and business owner in Lagos Nigeria",
     comment:
-      "When it comes to big data analytics and AI-powered forecasting, Alveum is unparalleled. They helped us develop a predictive modeling system that has dramatically improved our risk assessment accuracy.",
+      "My hajj journey with A-DIN Globals was truly a blessing.From visa processing to accommodation near the Masjid al-Haram,everything was perfectly arranged.Their team's attention to detail and spiritual suppport made this experience unforgettable.I felt cared for every step of the way.May Allah reward them abundantly for their excellent services.",
   },
   {
-    name: "Julian J.",
-    company: "JJAIBOT",
+    name: "Captain Olumide J.",
+    company: "SkyWings Aviation Services",
     comment:
-      "Alveum's expertise in neuro-symbolic AI allowed us to create an environmental impact assessment tool that combines data-driven insights with expert knowledge in a way we hadn't thought possible.",
+      "We've patnered with A-Din Globals for over 5years,and their professionalism is exceptional.They handle flight bookings with precision and prioritizes their client's comfort and satisfaction.Their team is knowledgeable,responsive and truly understands the aviation industry.It's been a pleasure working with them.",
   },
   {
-    name: "Jim M.",
-    company: "Yohanna Foundation",
+    name: "Engr Abdullah S.",
+    company: "Project Manager,ilorin",
     comment:
-      "Partnering with Alveum for our AI-driven Praises.ai application was a game-changer. The AI/ML Engineers seamlessly integrated complex models into a user-friendly mobile app, exceeding our expectations.",
+      "A-DIN Globals constructed our office complex,and i couldn't be more impressed.They delivered quality workmanship,stayed within budget and completed the project ahead of schedule.Their project management team was transparent throughout,and their attention to structural integrity was outstanding.I highly recommend their construction services to anyone. ",
   },
   {
-    name: "Krishna K.",
-    company: "Panha Solutions",
+    name: "Ahmad H.",
+    company: "Dir,Al-Noor Hospitality Group,Saudi Arabia",
     comment:
-      "Alveum's edge AI solutions revolutionized our supply chain operations. Their AI models that work efficiently on our edge devices have significantly reduced latency and improved real-time decision making.",
+      "A-DIN Globals has been our trusted partner for accommodation services for several years.They consistently secures excellent lodging options for our clients,pilgrims and business travelers alike.Their team is efficient,responsive and goes above and beyond to ensure a comfortable stay for all.Our partnership has been invaluable to our operations.",
   },
 ];
 
@@ -643,43 +515,200 @@ if (testimonialContainer) {
 }
 
 // FORM
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
+//document.addEventListener("DOMContentLoaded", function () {
+ // const form = document.getElementById("contactForm");
 
-  form?.addEventListener("submit", function (event) {
+ // form?.addEventListener("submit", function (event) {
+   /// event.preventDefault();
+
+    //const nameInput = document.querySelector(
+   //   'input[name="Name"]'
+   // ) as HTMLInputElement | null;
+ //   const emailInput = document.querySelector(
+     // 'input[name="Email"]'
+   // ) as HTMLInputElement | null;
+    //const messageInput = document.getElementById(
+    //  "message"
+    //) as HTMLInputElement | null;
+
+    //if (nameInput && emailInput && messageInput) {
+    //  const name = nameInput.value;
+    //  const email = emailInput.value;
+      //const message = messageInput.value;
+
+      //const createMailtoLink = () => {
+       // const mailto = "contact@alveum.com";
+       // const subjectParam = encodeURIComponent(
+        //  "contacting you from your website"
+       // );
+       // const bodyParam = encodeURIComponent(`Hello, I'm ${name}.\n${message}`);
+       // const emailParam = encodeURIComponent(email);
+
+      //  return `mailto:${mailto}?subject=${subjectParam}&body=${bodyParam}&cc=${emailParam}`;
+     // };
+
+      //const mailtoLink = createMailtoLink();
+      //window.open(mailtoLink, "_blank");
+   // }
+ // });
+//});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm") as HTMLFormElement | null;
+  const submitBtn = document.getElementById("submitBtn") as HTMLButtonElement | null;
+  const successMessage = document.getElementById("successMessage");
+  const errorMessage = document.getElementById("errorMessage");
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const nameInput = document.querySelector(
-      'input[name="Name"]'
-    ) as HTMLInputElement | null;
-    const emailInput = document.querySelector(
-      'input[name="Email"]'
-    ) as HTMLInputElement | null;
-    const messageInput = document.getElementById(
-      "message"
-    ) as HTMLInputElement | null;
+    // Get form inputs
+    const nameInput = document.querySelector('input[name="Name"]') as HTMLInputElement | null;
+    const emailInput = document.querySelector('input[name="Email"]') as HTMLInputElement | null;
+    const messageInput = document.getElementById("message") as HTMLTextAreaElement | null;
 
-    if (nameInput && emailInput && messageInput) {
-      const name = nameInput.value;
-      const email = emailInput.value;
-      const message = messageInput.value;
+    if (!nameInput || !emailInput || !messageInput) return;
 
-      const createMailtoLink = () => {
-        const mailto = "contact@alveum.com";
-        const subjectParam = encodeURIComponent(
-          "contacting you from your website"
-        );
-        const bodyParam = encodeURIComponent(`Hello, I'm ${name}.\n${message}`);
-        const emailParam = encodeURIComponent(email);
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
 
-        return `mailto:${mailto}?subject=${subjectParam}&body=${bodyParam}&cc=${emailParam}`;
-      };
+    // Basic validation
+    if (!name || !email || !message) {
+      if (errorMessage) {
+        errorMessage.textContent = "Please fill in all fields.";
+        errorMessage.classList.remove("hidden");
+      }
+      return;
+    }
 
-      const mailtoLink = createMailtoLink();
-      window.open(mailtoLink, "_blank");
+    // Disable button and show "Sending..."
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    // Create mailto link
+    const mailto = "contact@alveum.com";
+    const subjectParam = encodeURIComponent("Contacting you from your website");
+    const bodyParam = encodeURIComponent(`Hello, I'm ${name}.\n\n${message}`);
+    const emailParam = encodeURIComponent(email);
+    const mailtoLink = `mailto:${mailto}?subject=${subjectParam}&body=${bodyParam}&cc=${emailParam}`;
+
+    // Simulate sending (no backend)
+    try {
+      window.location.href = mailtoLink;
+
+      // Optional: Show success message for a few seconds
+      if (successMessage) {
+        successMessage.textContent = "Message ready to send via your email app!";
+        successMessage.classList.remove("hidden");
+      }
+
+      // Reset form
+      form.reset();
+    } catch (error) {
+      if (errorMessage) {
+        errorMessage.textContent = "Something went wrong. Please try again.";
+        errorMessage.classList.remove("hidden");
+      }
+    } finally {
+      // Re-enable button after 2 seconds
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
+        }
+      }, 2000);
     }
   });
 });
+
+interface FormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    service: string;
+    message: string;
+    timestamp: string;
+}
+
+//  Google Apps Script URL //
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8H4uRP-KwfjycHQo7qfwq08zbDAqUYfRvFg5FXLuWknWx1fWxLyzjrP0XFDK5442H/exec';
+
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+    const successMessage = document.getElementById('successMessage') as HTMLDivElement;
+    const errorMessage = document.getElementById('errorMessage') as HTMLDivElement;
+
+    if (form) {
+        form.addEventListener('submit', async (e: Event) => {
+            e.preventDefault();
+
+            // Hide previous messages
+            successMessage?.classList.add('hidden');
+            errorMessage?.classList.add('hidden');
+
+            // Disable submit button
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+
+            try {
+                // Collect form data
+                const formData: FormData = {
+                    firstName: (document.getElementById('firstName') as HTMLInputElement).value,
+                    lastName: (document.getElementById('lastName') as HTMLInputElement).value,
+                    email: (document.getElementById('email') as HTMLInputElement).value,
+                    phone: (document.getElementById('phone') as HTMLInputElement).value,
+                    service: (document.getElementById('service') as HTMLSelectElement).value,
+                    message: (document.getElementById('message') as HTMLTextAreaElement).value,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Send to Google Sheets
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Show success message
+                successMessage?.classList.remove('hidden');
+                form.reset();
+
+                // Scroll to success message
+                successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage?.classList.remove('hidden');
+                errorMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Re-enable submit button
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            }
+        });
+    }
+});
+
+    
+
+    
+
 
 const currentYear = document.getElementById("currentYear") as HTMLElement;
 currentYear.textContent = new Date().getFullYear().toString();
