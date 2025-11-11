@@ -4,13 +4,13 @@ import "swiper/css/bundle";
 import "./styles.css";
 
 import gsap from "gsap";
-import BrainscanImg from "../src/assets/pricing.jpg";
+import BrainscanImg from "../src/assets/AI4.jpg";
 import canadaImg from "../src/assets/Hajj-N.jpg";
 import ctoImg from "../src/assets/engr.jpg";
-import drugDiscoveryImg from "../src/assets/experience.jpg";
-import praisesAiImg from "../src/assets/licensed.jpg";
-import scmImg from "../src/assets/support.jpg";
-import termMgmtImg from "../src/assets/management.jpg";
+import drugDiscoveryImg from "../src/assets/AI-.jpg";
+import praisesAiImg from "../src/assets/AI2-.jpg";
+import scmImg from "../src/assets/AI5.jpg";
+import termMgmtImg from "../src/assets/AI3.jpg";
 
 new Lenis({
   autoRaf: true,
@@ -244,7 +244,7 @@ if (projectsGrid) {
               <img
                 src=${project.img}
                 alt=${project.title}
-                class="w-[500px] h-[300px] lg:h-[400px] object-cover"
+                class="w-[500px] h-[300px] lg:h-[400px] object-cover" style="height: 500px;"
               />
             </aside>
 
