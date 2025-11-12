@@ -133,7 +133,7 @@ const services = [
     description:
       "Sacred journey made easy for you with spiritual connections all through your journey with our nasheeds and adhkars",
     icon: `      <img src="../src/assets/hajj.jpg" alt="Kaaba icon" width="50" height="50" class="object-cover"/>`,
-    img: "../src/assets/hajj.jpg",
+    img: hajjImg,
     alt: "Kaaba icon",
   },
   {
@@ -141,32 +141,32 @@ const services = [
     description:
       "Experience seamless global travel with our comprehensive flight bookings, visa assistance and customized tour packages.",
     icon: `    <img src="../src/assets/airplane.jpg" alt="Airplane icon" width="50" height="50" object-cover/>`,
-    img: "../src/assets/airplane.jpg",
+    img: airplaneImg,
   },
   {
     title: "General Contracting",
     description:
       "Quality construction services for residential and commercial projects with expert craftmanship and timely delivery.",
-    img: "../src/assets/globe.jpg",
+    img: globeImg,
   },
   //
   {
     title: "General Merchandise",
     description:
       "Reliable import-export solutions connecting businesses with quality products across diverse industries worldwide.",
-    img: "../src/assets/carton.jpg",
+    img: cartonImg,
   },
   {
     title: "International trading",
     description:
       "    Facilitating smooth commercial transactions and bulk trading operations across borders with transparency.",
-    img: "../src/assets/building.jpg",
+    img: buildingImg,
   },
   {
     title: "Accommodation Services",
     description:
       " Premium hotel reservations and comfortable lodging arrangements for pilgrims and travelers worldwide.",
-    img: "../src/assets/hotel.jpg",
+    img: hotelImg,
   },
 ];
 
