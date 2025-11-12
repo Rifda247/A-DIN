@@ -11,6 +11,17 @@ import drugDiscoveryImg from "../src/assets/AI-.jpg";
 import praisesAiImg from "../src/assets/AI2-.jpg";
 import scmImg from "../src/assets/AI5.jpg";
 import termMgmtImg from "../src/assets/AI3.jpg";
+import cartonImg from "../src/assets/carton.jpg";
+import buildingImg from "../src/assets/building.jpg";
+import globeImg from "../src/assets/globe.jpg";
+import hotelImg from "../src/assets/hotel.jpg";
+import hajjImg from "../src/assets/hajj.jpg";
+import airplaneImg from "../src/assets/airplane.jpg";
+
+interface AccordionItem {
+  title: string;
+  content: string;
+}
 
 new Lenis({
   autoRaf: true,
@@ -136,7 +147,7 @@ const services = [
     title: "General Contracting",
     description:
       "Quality construction services for residential and commercial projects with expert craftmanship and timely delivery.",
-    img: "../src/assets/building.jpg",
+    img: "../src/assets/globe.jpg",
   },
   //
   {
@@ -149,7 +160,7 @@ const services = [
     title: "International trading",
     description:
       "    Facilitating smooth commercial transactions and bulk trading operations across borders with transparency.",
-    img: "../src/assets/globe.jpg",
+    img: "../src/assets/building.jpg",
   },
   {
     title: "Accommodation Services",
